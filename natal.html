@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Cookie&display=swap" rel="stylesheet">
+    <style>
+
+      body {
+        background-image: url(img/bg.jpg);
+        width: 100%;
+        height: 100vh;
+        perspective: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Archivo Narrow', sans-serif;
+      }
+
+      .card {
+        transform-style: preserve-3d;
+        position: relative;
+        height: 200px;
+        cursor: pointer;
+      }
+
+      .front {
+        background: darkred url(img/winter_scene.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+      .front, .page {
+        background: darkred url(img/winter_scene.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+      .front, .back, .page {
+        transform-style: preserve-3d;
+        transform-origin: left center;
+        transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+        position: absolute;
+        width: 120px;
+        height: 100%;
+        top: 0; 
+        left: 0;
+        background-color: #F7F7F7;
+        padding: 40px;
+      }
+
+      .card:hover .front {
+        transform: rotateY(-160deg);
+        box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+      }
+
+      .card:hover .page {
+        transform: rotateY(-159deg);
+        box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+      }
+
+      .card:hover .back {
+        transform: rotateY(-20deg);
+        box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+      }
+
+      h1 {
+        font-family: 'Cookie', serif;
+        font-size: 40px;
+        margin-top: 40px;
+        color: white;
+      }
+
+      .message {
+        color: #900909;
+      }
+
+      h4 {
+        margin-top: 5px;
+        font-family: 'Cookie', serif;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      img{
+        margin-top: 40px;
+        width: 100px;
+        transform: scaleX(-1);
+        border-radius: 4px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="back">
+        <div class="message">
+          <h4>Meu amor, </h4>
+          <p>Que possamos viver este momento mágico, cultivando a gratidão e celebrando o amor de Jesus Cristo em nossas vidas. Obrigado por esse ano de 2023!
+          <h4>Seu mozão, Hyérre Hommos</h4>
+          </p>
+        </div>
+      </div>
+      <div class="page">
+        <img src="img/foto.jpeg" alt="Nossa foto">
+      </div>
+      <div class="front">
+        <h1>Feliz Natal!</h1>
+      </div>
+    </div>
+  </body>
+</html>
